@@ -48,7 +48,7 @@ export function FeatureCarousel() {
         </motion.div>
 
         <div className="relative">
-          <div className="embla" ref={emblaRef}>
+          <div className="embla overflow-hidden" ref={emblaRef}>
             <div className="embla__container flex gap-6">
               {carouselFeatures.map((feature, index) => (
                 <motion.div
@@ -57,7 +57,7 @@ export function FeatureCarousel() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   viewport={{ once: true, margin: '-100px' }}
-                  className="embla__slide flex-none w-80 rounded-2xl bg-filmbox-card border border-filmbox-border shadow-cinematic overflow-hidden"
+                  className="embla__slide flex-none min-w-0 w-80 rounded-2xl bg-filmbox-card border border-filmbox-border shadow-cinematic overflow-hidden"
                 >
                   <div className="aspect-video">
                     <Image

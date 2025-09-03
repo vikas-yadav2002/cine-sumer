@@ -8,6 +8,9 @@ import { AnimatedPreloader } from "./AnimatedLoader";
 export function Hero() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [isReady, setIsReady] = useState(false);
+const [minTimePassed, setMinTimePassed] = useState(false);
+
+  
 
   useEffect(() => {
     const video = videoRef.current;
@@ -27,6 +30,12 @@ export function Hero() {
       video.removeEventListener("canplaythrough", handleCanPlayThrough);
     };
   }, []);
+
+  useEffect(() => {
+  const minDelay = setTimeout(() => setMinTimePassed(true), 1500);
+  return () => clearTimeout(minDelay);
+}, []);
+
 
   return (
     <>

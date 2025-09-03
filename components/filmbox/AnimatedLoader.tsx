@@ -19,6 +19,15 @@ export const AnimatedPreloader: React.FC<AnimatedPreloaderProps> = ({
   const [initialCompleted, setInitialCompleted] = useState(false);
   const shouldExitAfterInitial = useRef(false);
   const [isVisible, setIsVisible] = useState(true);
+  const [minTimePassed, setMinTimePassed] = useState(false);
+
+
+useEffect(() => {
+  if (targetReady && minTimePassed) {
+    setIsVisible(false);
+  }
+}, [targetReady, minTimePassed]);
+
 
   // Variants typed as Variants for TS correctness
   const containerVariants: Variants = {
@@ -80,9 +89,12 @@ export const AnimatedPreloader: React.FC<AnimatedPreloaderProps> = ({
 
     // if targetReady became true during initial, exit now (but keep a short delay so loop isn't jarring)
     if (shouldExitAfterInitial.current) {
-      // small delay so user sees the final settled state briefly before exit
-      window.setTimeout(() => setIsVisible(false), 140);
-    }
+  // Let the loop animation run for ~1 cycle before exit
+  timersRef.current.push(
+    window.setTimeout(() => setIsVisible(false), 2000) // adjust duration ~1 loop cycle
+  );
+}
+
   };
 
   // cleanup timers on unmount (track ids)
