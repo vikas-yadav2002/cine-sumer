@@ -1,12 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Download, ShoppingCart } from 'lucide-react';
 
 export function FinalCTA() {
   return (
-    <section className="py-24 md:py-32">
-      <div className="max-w-4xl mx-auto px-4 md:px-6 text-center">
+    <section className="relative py-24 md:py-32 overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 md:px-6 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -14,32 +13,44 @@ export function FinalCTA() {
           viewport={{ once: true, margin: '-100px' }}
           className="space-y-8"
         >
-          {/* Logo */}
-          <div className="w-24 h-24 mx-auto bg-filmbox-card rounded-2xl flex items-center justify-center shadow-cinematic">
-            <div className="w-16 h-16 bg-filmbox-blue rounded-xl flex items-center justify-center">
-              <span className="text-2xl font-bold text-filmbox-bg">F</span>
-            </div>
-          </div>
-
+          {/* Heading */}
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-filmbox-text-primary">
-            Download the free trial
+            Ready to create cinematic magic?
           </h2>
 
-          <p className="text-xl text-filmbox-text-secondary max-w-2xl mx-auto">
-            Experience the difference with a 14-day free trial. No watermarks, full feature access.
+          <p className="text-lg md:text-xl text-filmbox-text-secondary max-w-3xl mx-auto">
+            Try out the demo, watch tutorials on YouTube, or follow our creative journey on Instagram.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="inline-flex items-center justify-center rounded-full px-8 py-4 text-base font-semibold text-filmbox-bg bg-filmbox-blue hover:bg-[#4a92eb] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-filmbox-blue focus-visible:ring-offset-filmbox-bg transition-colors">
-              <Download size={18} className="mr-2" />
-              Download Free Trial
-            </button>
-            
-            <button className="inline-flex items-center justify-center rounded-full px-8 py-4 text-base font-semibold text-filmbox-bg bg-filmbox-amber hover:bg-[#e6bd59] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-filmbox-amber focus-visible:ring-offset-filmbox-bg transition-colors">
-              <ShoppingCart size={18} className="mr-2" />
-              Buy a License
-            </button>
-          </div>
+          {/* Hero-style Buttons */}
+          <motion.div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+            <a
+              href="https://buymeacoffee.com/cinesumerb/extras"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center rounded-md border border-slate-100 py-2 px-4 text-sm transition-all shadow-sm hover:shadow-lg text-slate-100 hover:text-white hover:bg-slate-800 hover:border-slate-800"
+            >
+              DEMO LINK
+            </a>
+
+            <a
+              href="https://www.youtube.com/@CINESUMER/videos"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center rounded-md border border-red-500 py-2 px-4 text-sm transition-all shadow-sm hover:shadow-lg text-red-500 hover:text-white hover:bg-red-600 hover:border-red-600"
+            >
+              YT CHANNEL LINK
+            </a>
+
+            <a
+              href="https://www.instagram.com/cinesumer/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center rounded-md border border-pink-500 py-2 px-4 text-sm transition-all shadow-sm hover:shadow-lg text-pink-500 hover:text-white hover:bg-pink-600 hover:border-pink-600"
+            >
+              IG LINK
+            </a>
+          </motion.div>
         </motion.div>
       </div>
     </section>

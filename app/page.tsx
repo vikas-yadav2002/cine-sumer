@@ -11,6 +11,7 @@ import { DeepFeatures } from '@/components/filmbox/DeepFeatures';
 import { RelatedProducts } from '@/components/filmbox/RelatedProducts';
 import { FinalCTA } from '@/components/filmbox/FinalCTA';
 import { Footer } from '@/components/site/Footer';
+import ExpressiveControls from '@/components/filmbox/ExpressiveControls';
 
 export default function Home() {
   return (
@@ -59,7 +60,8 @@ export default function Home() {
       <StockAccordion />
       <FeatureCarousel />
       <DeepFeatures />
-      <RelatedProducts />
+      {/* <RelatedProducts /> */}
+      <ExpressiveControls />
       <FinalCTA />
       <Footer />
     </main>

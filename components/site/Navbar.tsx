@@ -38,7 +38,7 @@ export function Navbar() {
               <div className="w-8 h-8 bg-filmbox-blue rounded-md flex items-center justify-center">
                 <span className="text-sm font-bold text-filmbox-bg">CS</span>
               </div>
-              <span className="text-lg font-semibold">CineSummer</span>
+              <span className="text-lg font-semibold">CineSumer</span>
               <div className="hidden md:block bg-filmbox-card px-3 py-1 rounded-full text-xs text-filmbox-text-muted">
                 Colourist
               </div>

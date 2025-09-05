@@ -1,4 +1,6 @@
-import { Github, Twitter, Youtube } from 'lucide-react';
+'use client';
+
+import { Github, Youtube, Instagram, Link } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -8,53 +10,82 @@ export function Footer() {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <div className="w-8 h-8 bg-filmbox-blue rounded-md flex items-center justify-center">
-              <span className="text-sm font-bold text-filmbox-bg">VV</span>
+              <span className="text-sm font-bold text-filmbox-bg">CS</span>
             </div>
-            <span className="text-lg font-semibold text-filmbox-text-primary">Video Village</span>
+            <span className="text-lg font-semibold text-filmbox-text-primary">
+              CineSummer
+            </span>
           </div>
 
           {/* Navigation */}
           <div className="flex items-center space-x-8">
-            <a href="#" className="text-filmbox-text-muted hover:text-filmbox-text-secondary transition-colors">
+            <a
+              href="#"
+              className="text-filmbox-text-muted hover:text-filmbox-text-secondary transition-colors"
+            >
               Privacy
             </a>
-            <a href="#" className="text-filmbox-text-muted hover:text-filmbox-text-secondary transition-colors">
+            <a
+              href="#"
+              className="text-filmbox-text-muted hover:text-filmbox-text-secondary transition-colors"
+            >
               Terms
             </a>
-            <a href="#" className="text-filmbox-text-muted hover:text-filmbox-text-secondary transition-colors">
+            <a
+              href="#"
+              className="text-filmbox-text-muted hover:text-filmbox-text-secondary transition-colors"
+            >
               Contact
             </a>
           </div>
 
-          {/* Social */}
+          {/* Social Links */}
           <div className="flex items-center space-x-4">
-            <a 
-              href="#" 
-              className="p-2 text-filmbox-text-muted hover:text-filmbox-text-secondary transition-colors"
-              aria-label="GitHub"
-            >
-              <Github size={18} />
-            </a>
-            <a 
-              href="#" 
-              className="p-2 text-filmbox-text-muted hover:text-filmbox-text-secondary transition-colors"
-              aria-label="Twitter"
-            >
-              <Twitter size={18} />
-            </a>
-            <a 
-              href="#" 
+            <a
+              href="https://www.youtube.com/@CINESUMER/videos"
+              target="_blank"
+              rel="noopener noreferrer"
               className="p-2 text-filmbox-text-muted hover:text-filmbox-text-secondary transition-colors"
               aria-label="YouTube"
             >
               <Youtube size={18} />
             </a>
+            <a
+              href="https://www.instagram.com/cinesumer/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 text-filmbox-text-muted hover:text-filmbox-text-secondary transition-colors"
+              aria-label="Instagram"
+            >
+              <Instagram size={18} />
+            </a>
+            <a
+              href="https://buymeacoffee.com/cinesumerb/extras"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 text-filmbox-text-muted hover:text-filmbox-text-secondary transition-colors"
+              aria-label="Demo Link"
+            >
+              <Link size={18} />
+            </a>
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-filmbox-border text-center">
+        {/* Bottom Footer */}
+        <div className="mt-8 pt-8 border-t border-filmbox-border text-center space-y-2">
           <p className="text-filmbox-text-muted text-sm">
-            © 2025 Video Village. All rights reserved.
+            Made by CineSummer. All rights reserved.
+          </p>
+          <p className="text-filmbox-text-muted text-sm">
+            Crafted by{" "}
+            <a
+              href="https://github.com/vikas-yadav2002"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-filmbox-text-secondary underline"
+            >
+              Vikas Yadav
+            </a>
           </p>
         </div>
       </div>
