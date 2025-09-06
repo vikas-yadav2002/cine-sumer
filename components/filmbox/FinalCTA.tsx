@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { Coffee, Youtube, Instagram } from 'lucide-react';
 
 export function FinalCTA() {
   return (
@@ -22,33 +23,33 @@ export function FinalCTA() {
             Try out the demo, watch tutorials on YouTube, or follow our creative journey on Instagram.
           </p>
 
-          {/* Hero-style Buttons */}
-          <motion.div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          {/* Icon Links */}
+          <motion.div className="flex items-center justify-center gap-6 pt-4">
             <a
               href="https://buymeacoffee.com/cinesumerb/extras"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center rounded-md border border-slate-100 py-2 px-4 text-sm transition-all shadow-sm hover:shadow-lg text-slate-100 hover:text-white hover:bg-slate-800 hover:border-slate-800"
+              className="p-3 rounded-full border border-slate-100 text-slate-100 hover:bg-slate-800 hover:border-slate-800 hover:text-white transition-all shadow-md"
             >
-              DEMO LINK
+              <Coffee size={28} />
             </a>
 
             <a
               href="https://www.youtube.com/@CINESUMER/videos"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center rounded-md border border-red-500 py-2 px-4 text-sm transition-all shadow-sm hover:shadow-lg text-red-500 hover:text-white hover:bg-red-600 hover:border-red-600"
+              className="p-3 rounded-full border border-red-500 text-red-500 hover:bg-red-600 hover:border-red-600 hover:text-white transition-all shadow-md"
             >
-              YT CHANNEL LINK
+              <Youtube size={28} />
             </a>
 
             <a
               href="https://www.instagram.com/cinesumer/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center rounded-md border border-pink-500 py-2 px-4 text-sm transition-all shadow-sm hover:shadow-lg text-pink-500 hover:text-white hover:bg-pink-600 hover:border-pink-600"
+              className="p-3 rounded-full border border-pink-500 text-pink-500 hover:bg-pink-600 hover:border-pink-600 hover:text-white transition-all shadow-md"
             >
-              IG LINK
+              <Instagram size={28} />
             </a>
           </motion.div>
         </motion.div>

@@ -42,7 +42,7 @@ export function TechGrid() {
               whileHover={{ y: -2 }}
               className="rounded-2xl bg-filmbox-card border border-filmbox-border p-6 shadow-cinematic hover:shadow-[0_25px_70px_-20px_rgba(0,0,0,0.8)] transition-all duration-300"
             >
-              <feature.icon className="w-8 h-8 text-filmbox-blue mb-4" />
+              <feature.icon className="w-8 h-8 text-white mb-4" />
               <h3 className="text-lg font-bold text-filmbox-text-primary mb-2">
                 {feature.title}
               </h3>

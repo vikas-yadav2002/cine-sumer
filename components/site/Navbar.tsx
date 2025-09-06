@@ -17,7 +17,11 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = ['Home', 'Products', 'Blog', 'Support', 'Account'];
+  const navItems = [
+    { name: 'Home', href: '/' },
+    { name: 'Products', href: '/products' },
+    { name: 'Roadmap', href: '/roadmap' },
+  ];
 
   return (
     <>
@@ -35,8 +39,8 @@ export function Navbar() {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-filmbox-blue rounded-md flex items-center justify-center">
-                <span className="text-sm font-bold text-filmbox-bg">CS</span>
+              <div className="w-8 h-8 bg-black rounded-md flex items-center justify-center">
+                <span className="text-sm font-bold text-white">CS</span>
               </div>
               <span className="text-lg font-semibold">CineSumer</span>
               <div className="hidden md:block bg-filmbox-card px-3 py-1 rounded-full text-xs text-filmbox-text-muted">
@@ -48,11 +52,11 @@ export function Navbar() {
             <div className="hidden md:flex items-center space-x-8">
               {navItems.map((item) => (
                 <a
-                  key={item}
-                  href="#"
+                  key={item.name}
+                  href={item.href}
                   className="text-filmbox-text-secondary hover:text-filmbox-text-primary transition-colors"
                 >
-                  {item}
+                  {item.name}
                 </a>
               ))}
             </div>
@@ -79,11 +83,11 @@ export function Navbar() {
             <div className="px-4 py-4 space-y-4">
               {navItems.map((item) => (
                 <a
-                  key={item}
-                  href="#"
+                  key={item.name}
+                  href={item.href}
                   className="block text-filmbox-text-secondary hover:text-filmbox-text-primary transition-colors"
                 >
-                  {item}
+                  {item.name}
                 </a>
               ))}
             </div>

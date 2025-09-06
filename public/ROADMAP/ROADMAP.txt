@@ -1,0 +1,62 @@
+SumerFade 1.0 – The Foundation
+
+DWG-DWG
+SumerFade Roadmap
+
+Core DCTL release with Film Grain, Halation, Gate Weave.
+
+Essential creative looks: Bleach Bypass, Film Saturation, Film Density.
+
+Negative Stock, Print Look, and Print Stock options inspired by Kodak & Fuji.
+
+Advanced Skin Control + Split Tone + Temp & Tint for precise color refinement.
+
+SumerFade 1.2 – Refinement Update (Already Out)
+
+Improved grain response and halation accuracy.
+
+Added fine-tuned controls for skin tones and density.
+
+Smoother tonal roll-offs for more natural film emulation.
+
+SumerFade 1.2.1 – 
+
+FilmTexture v2.0 → Authentic 16mm, 35mm, 65mm textures.
+
+One-click presets → Fast analog looks.
+
+Gate Weave & Aspect Ratios → Adds real film motion + framing.
+
+Border Radius & Vintage Borders → True cinematic edges.
+
+Upcoming Borders → Gritty, grungy textures coming soon.
+
+Built-in Tone Mapping (Basic) → Cleaner highlights & balanced contrast.
+
+
+----------------------------------------------------------------------------------------
+SumerFade 2.0β – The Expansion (Coming Soon)
+
+HDR support + full colorspace transforms (ACES, DWG, Log-C3/4, REDLog3G10).
+
+20+ Negative Film Stocks → Expanded Kodak, Fuji, Cinestill library.
+
+New Print Look library → Modern creative grades + Printer Lights control.
+
+Refined Film Texture Engine → Targeted grain for shadows, midtones, highlights.
+
+New Creative Tools → Radial Blur, Film Sharpness, Texture Pop, Vignette,organic lens diffusion,Film Compression.
+
+Enhanced UI → Emoji-labeled sliders for fast, intuitive control.
+-------------------------------------------------------------------------------------------
+
+No 3.0: instead evolving into a full plugin (OFX/VST-style).
+
+Works across multiple editing & grading platforms, not just DaVinci Resolve.
+
+Adds advanced features: halation glow layers, organic lens diffusion, subtractive saturation, and AI-assisted film tone matching.
+
+Designed as the ultimate all-in-one film emulation toolkit for modern creators.
+
+
+2.0β

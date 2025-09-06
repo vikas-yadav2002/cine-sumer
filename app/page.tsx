@@ -12,6 +12,7 @@ import { RelatedProducts } from '@/components/filmbox/RelatedProducts';
 import { FinalCTA } from '@/components/filmbox/FinalCTA';
 import { Footer } from '@/components/site/Footer';
 import ExpressiveControls from '@/components/filmbox/ExpressiveControls';
+import { FaqAccordion } from '@/components/filmbox/Question';
 
 export default function Home() {
   return (
@@ -32,7 +33,7 @@ export default function Home() {
         align="left"
       />
       
-      <FeatureSection
+      {/* <FeatureSection
         kicker="Industry Standard"
         title="ACES & HDR Support"
         copy="Full ACES-cct workflow compatibility with HDR tone mapping up to 1000 nits. Seamlessly integrate into any professional pipeline."
@@ -42,9 +43,9 @@ export default function Home() {
           alt: 'ACES workflow illustration',
         }}
         align="right"
-      />
+      /> */}
       
-      <FeatureSection
+      {/* <FeatureSection
         title="Metadata + LUT Export"
         copy="Export your looks as industry-standard LUTs in .cube, .3dl, .csp formats. Preserve metadata for seamless roundtrip workflows."
         media={{
@@ -54,14 +55,15 @@ export default function Home() {
         }}
         align="left"
       />
-      
-      <Showcase />
+       */}
+      {/* <Showcase /> */}
       <TechGrid />
       <StockAccordion />
-      <FeatureCarousel />
+      {/* <FeatureCarousel /> */}
       <DeepFeatures />
       {/* <RelatedProducts /> */}
       <ExpressiveControls />
+      <FaqAccordion/>
       <FinalCTA />
       <Footer />
     </main>

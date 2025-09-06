@@ -11,7 +11,7 @@ type AnimatedPreloaderProps = {
 };
 
 export const AnimatedPreloader: React.FC<AnimatedPreloaderProps> = ({
-  text = 'CineSummer',
+  text = 'CINESUMER',
   targetReady,
   onExited,
 }) => {

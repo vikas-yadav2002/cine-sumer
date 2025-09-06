@@ -1,0 +1,49 @@
+FILM GRAIN.mov
+Adds organic film grain texture to digital footage, mimicking analog film stock.
+It brings subtle depth, movement, and a cinematic character.
+--------------------------------------------------------------------------------
+2. HALATION.mov
+Simulates the glowing red/orange halo around bright highlights in film.
+This effect adds warmth and vintage authenticity to the image.
+
+3. GATEWEAVE.mov
+Replicates the slight frame instability of projected film reels.
+It introduces subtle motion and imperfection for a filmic feel.
+
+BLEACH-BYPASS.mov
+Simulates the bleach bypass process with a dedicated Silver control, 
+adding gritty contrast and desaturated tones while retaining cinematic depth.
+
+5. film-saturation.mov
+Controls film-like color richness and depth.
+Boosts or softens saturation while preserving natural skin tones.
+
+6. FIM DENSITY.mov
+Adjusts the density and richness of the film negative.
+It balances overall tonal weight, from thin washed images to deep dense film looks.
+
+SKIN CONTROL.mov
+Advanced skin refinement tools that isolate tones with precision, allowing adjustments to hue, saturation, and density without affecting surrounding colors. This ensures natural, controlled results while preserving authenticity in every grade.
+
+TEMP & TINT.mov
+Balances color temperature and tint with precision, shifting warm–cool and green–magenta tones without crushing shadows or shifting black levels.
+This ensures clean, natural adjustments that preserve image integrity.
+
+HUE SPLIT & CYAN.mov
+Enhances color separation and contrast through a hue split system, creating stronger cinematic depth and refined tonal balance.
+----------------------------------------------------------------------------------------
+Split Tone
+CONTEMPORARY-Applies warm highlights and cool shadows, giving a modern, polished cinematic look.
+
+RETRO-Applies cool highlights and warm shadows, creating a nostalgic, vintage film feel.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+PRINTSTOCK.mov
+Includes Kodak 2383 (D55, D60, D65) and Fuji 3513 (D55, D60, D65) emulations, accurately reproducing classic print film contrast and color balance.
+
+NEGATIVE STOCK.mov
+Simulates various film negative responses, allowing you to shape contrast and color behavior at the foundational capture stage.
+
+PRINT LOOK - Original creative grades inspired by modern cinematography, designed to capture mood and tone rather than replicate a single stock.
+--------------------------------------------------------------------------------------------------------------------------------------------------

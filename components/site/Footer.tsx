@@ -9,11 +9,11 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-filmbox-blue rounded-md flex items-center justify-center">
-              <span className="text-sm font-bold text-filmbox-bg">CS</span>
+            <div className="w-8 h-8 bg-black rounded-md flex items-center justify-center">
+              <span className="text-sm font-bold text-white">CS</span>
             </div>
             <span className="text-lg font-semibold text-filmbox-text-primary">
-              CineSummer
+              CINESUMER
             </span>
           </div>
 
@@ -74,7 +74,7 @@ export function Footer() {
         {/* Bottom Footer */}
         <div className="mt-8 pt-8 border-t border-filmbox-border text-center space-y-2">
           <p className="text-filmbox-text-muted text-sm">
-            Made by CineSummer. All rights reserved.
+            Made by CINESUMER. All rights reserved.
           </p>
           <p className="text-filmbox-text-muted text-sm">
             Crafted by{" "}

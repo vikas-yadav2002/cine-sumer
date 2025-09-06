@@ -1,0 +1,10 @@
+
+SumerFade is a handcrafted film emulation system designed to bring the emotion, imperfection, and beauty of analog film into the digital color grading world.
+Built for filmmakers and colorists. 
+it recreates the look of classic stocks like Kodak Vision3, Fuji 3513, and Cinestill - 
+with full support for 16mm, 35mm, and 65mm film aesthetics.
+At its core. SumerFade is more than just looks or LUTs. 
+It's a a custom engine featuring DCTL-based sliders for Split Toning, Density, Hue Split, film tone mapping, and dual-layer negative + print workflows - all in real-time.
+Crafted for precision, but driven by emotion.
+    
+This0 is SumerFade.                                                                          By Cinesumer
