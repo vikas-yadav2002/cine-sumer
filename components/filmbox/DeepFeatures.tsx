@@ -43,7 +43,7 @@ export function DeepFeatures() {
               className="rounded-2xl bg-filmbox-card border border-filmbox-border p-8 shadow-cinematic hover:shadow-[0_25px_70px_-20px_rgba(0,0,0,0.8)] transition-all duration-300"
             >
               <div className="w-12 h-12 bg-filmbox-blue/10 rounded-xl flex items-center justify-center mb-6">
-                <feature.icon className="w-6 h-6 text-filmbox-blue" />
+                <feature.icon className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-bold text-filmbox-text-primary mb-3">
                 {feature.title}
