@@ -9,30 +9,28 @@ export function Hero() {
   const [isReady, setIsReady] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // List of images from public/landingpage/
   const images = [
     "/hero/1.png",
     "/hero/2.png",
     "/hero/3.png",
     "/hero/4.png",
-    "/hero/5.png",  
+    "/hero/5.png",
     "/hero/6.png",
-    "/hero/7.png"
+    "/hero/7.png",
   ];
 
-  // Slideshow effect
   useEffect(() => {
-    setIsReady(true); // preloader trigger
+    setIsReady(true);
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 5000); // change every 5s
+    }, 3000);
     return () => clearInterval(interval);
   }, [images.length]);
 
   return (
     <>
       <AnimatedPreloader text="CINESUMER" targetReady={isReady} />
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#121212]">
+      <section className="relative min-h-screen flex items-end justify-start overflow-hidden bg-[#121212]">
         {/* Overlay while loading */}
         <div
           className={`absolute inset-0 z-40 flex items-center justify-center bg-[#121212] transition-opacity duration-700 ease-in-out ${
@@ -43,17 +41,21 @@ export function Hero() {
 
         {/* Background Slideshow */}
         <div className="absolute inset-0 w-full h-full">
-          <AnimatePresence mode="wait">
-            <motion.img
-              key={currentIndex}
-              src={images[currentIndex]}
-              alt="Background slideshow"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 1.5, ease: "easeInOut" }}
-              className="absolute inset-0 w-full h-full object-cover"
-            />
+          <AnimatePresence mode="sync">
+            {images.map((img, idx) =>
+              idx === currentIndex ? (
+                <motion.img
+                  key={img}
+                  src={img}
+                  alt="Background slideshow"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 1.5, ease: "easeInOut" }}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              ) : null
+            )}
           </AnimatePresence>
         </div>
 
@@ -69,62 +71,55 @@ export function Hero() {
         />
 
         {/* Foreground content */}
-        <div className="relative z-30 max-w-4xl mx-auto px-6 text-center">
+        <div className="relative z-30 max-w-5xl px-6 md:px-12 pb-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isReady ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="space-y-8"
           >
-            {/* Title */}
-            <motion.h1
-              className="font-extrabold tracking-tight text-white 
-             text-6xl md:text-7xl leading-[1.1]"
-            >
-              SumerFade
+            {/* Tagline aligned left */}
+            <motion.h1 className="text-white font-extrabold tracking-tight text-4xl md:text-6xl leading-tight max-w-2xl">
+              Precision-crafted looks for colorists who refuse to fake it.
             </motion.h1>
 
-            {/* Subtitle */}
-            <motion.p
-              className="mt-6 text-lg md:text-2xl font-medium 
-             text-neutral-300 max-w-2xl mx-auto leading-relaxed"
-            >
-              Precision-crafted looks for colorists who refuse to fake it.{" "}
-              <br />
-              <span className="text-neutral-400">
-                Authentic print profiles, nuanced grain, halation, and color
-                density with ACES and HDR support.
-              </span>
-            </motion.p>
-
-            {/* Links (white icons) */}
-            <motion.div className="mt-8 flex items-center justify-center space-x-6">
+            {/* Icons in row, aligned like buttons */}
+            <motion.div className="flex space-x-6">
               <a
                 href="https://www.youtube.com/@CINESUMER/videos"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 text-white hover:text-neutral-300 transition-colors"
+                className="flex items-center px-4 py-2 rounded-md text-white font-medium   transition-colors"
                 aria-label="YouTube"
               >
-                <Youtube size={22} />
+                <Youtube size={20} className="mr-2" /> YouTube
               </a>
               <a
                 href="https://www.instagram.com/cinesumer/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 text-white hover:text-neutral-300 transition-colors"
+                className="flex items-center px-4 py-2 rounded-md text-white font-medium   transition-colors"
                 aria-label="Instagram"
               >
-                <Instagram size={22} />
+                <Instagram size={20} className="mr-2" /> Instagram
               </a>
               <a
-                href="https://buymeacoffee.com/cinesumerb/extras"
+                href="https://buymeacoffee.com/cinesumerb/e/449696"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 text-white hover:text-neutral-300 transition-colors"
+                className="flex items-center px-4 py-2 rounded-md text-white font-medium   transition-colors"
                 aria-label="Demo Link"
               >
-                <Link size={22} />
+                <Link size={20} className="mr-2" /> Demo DCTL
+              </a>
+              <a
+                href="https://buymeacoffee.com/cinesumerb/e/447385"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center px-4 py-2 rounded-md text-white font-medium   transition-colors"
+                aria-label="Demo Link"
+              >
+                <Link size={20} className="mr-2" />PDF
               </a>
             </motion.div>
           </motion.div>

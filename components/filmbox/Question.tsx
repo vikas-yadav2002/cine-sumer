@@ -6,24 +6,37 @@ import { ChevronDown } from 'lucide-react';
 
 const faqs = [
   {
-    question: 'What is SumerFade?',
+    question: 'Is SumerFade compatible with my system?',
     answer:
-      'SumerFade is a handcrafted film emulation system that brings the emotion, imperfection, and beauty of analog film into the digital color grading world. It recreates classic looks while offering real-time DCTL controls for precision and creativity.',
+      'Yes, SumerFade works on Windows and Mac, but only inside DaVinci Resolve.',
   },
   {
-    question: 'Which platforms does SumerFade support?',
+    question: 'What’s the difference between SumerFade TEST, SumerFade, and SumerFade Pro?',
     answer:
-      'Currently, SumerFade is designed for DaVinci Resolve Studio via DCTLs. Future versions aim to expand into plugin formats (OFX/VST-style) to support multiple editing and grading platforms.',
+      'SumerFade TEST → Made only for testing before buying the full license.\n\nSumerFade → Limited-time access version.\n\nSumerFade Pro → Lifetime access version.',
   },
   {
-    question: 'Can I get refunds on my subscription?',
+    question: 'Does SumerFade require an internet connection?',
+    answer: 'No, it works offline once installed.',
+  },
+  {
+    question: 'What configurations can Filmverse DCTLs run on?',
     answer:
-      'Yes, under the 1-Year Subscription plan, you can request a refund within the first month (service charges apply). After that, or under short-term plans, refunds are not offered.',
+      'They run smoothly on Nvidia, Apple Silicon, and AMD architectures. Still, we strongly recommend trying the TEST versions first for compatibility.',
+  },
+  {
+    question: 'Do DCTLs expire often?',
+    answer: 'Not at all. DCTLs have a validity till your expiry date.',
   },
   {
     question: 'How often do I need to update my DCTL?',
     answer:
-      'For the 1-Year Subscription, you are required to update your DCTL every 3 months. We send automatic email reminders with update instructions to ensure compatibility and performance.',
+      'For the perpetual Subscription, you are required to update your DCTL once every year. We send automatic email reminders with update instructions to ensure compatibility and performance.',
+  },
+  {
+    question: 'Can I get refunds on my subscription?',
+    answer:
+      'Yes, refunds are available under the 1-Year and 3-Month Subscription plans if requested within the first month, with service charges applied. Refunds are only applicable if the DCTL fails to run on your system. For perpetual licences, refunds are not offered.',
   },
 ];
 
@@ -91,7 +104,7 @@ export function FaqAccordion() {
                   >
                     <div className="px-6 pb-6 border-t border-filmbox-border/40">
                       <div className="pt-4">
-                        <p className="text-filmbox-text-secondary leading-7">
+                        <p className="text-filmbox-text-secondary leading-7 whitespace-pre-line">
                           {faq.answer}
                         </p>
                       </div>

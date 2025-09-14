@@ -19,9 +19,7 @@ export default function TermsAndConditions() {
             <h2 className="text-2xl font-semibold mb-3">1. Subscription Plans</h2>
             <p>
               <strong>1-Year Subscription:</strong> Includes ongoing access to SumerFade
-              Film Emulation DCTLs versions for 12 months. You are required to update your
-              DCTL every 3 months during the subscription period. Our team will send you
-              email reminders with update instructions automatically.
+              Film Emulation DCTLs versions for 12 months.
             </p>
             <p className="mt-2">
               <strong>1-Month Subscription:</strong> Includes access to the SumerFade Film
@@ -44,9 +42,7 @@ export default function TermsAndConditions() {
             <h2 className="text-2xl font-semibold mb-3">3. Privacy & Updates</h2>
             <p>
               Your subscription is linked to your purchase email for update notifications.
-              In the 1-year subscription model, failure to update the DCTL within the
-              3-month period may cause compatibility or performance issues, which we are
-              not responsible for.
+              
             </p>
           </section>
 

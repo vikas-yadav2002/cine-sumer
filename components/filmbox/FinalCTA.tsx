@@ -16,7 +16,7 @@ export function FinalCTA() {
         >
           {/* Heading */}
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-filmbox-text-primary">
-            Ready to create cinematic magic?
+            Lets make digital feel like film
           </h2>
 
           <p className="text-lg md:text-xl text-filmbox-text-secondary max-w-3xl mx-auto">

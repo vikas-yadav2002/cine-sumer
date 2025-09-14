@@ -20,19 +20,19 @@ export function Footer() {
           {/* Navigation */}
           <div className="flex items-center space-x-8">
             <a
-              href="#"
+              href="/products"
               className="text-filmbox-text-muted hover:text-filmbox-text-secondary transition-colors"
             >
               Privacy
             </a>
             <a
-              href="#"
+              href="/products"
               className="text-filmbox-text-muted hover:text-filmbox-text-secondary transition-colors"
             >
               Terms
             </a>
             <a
-              href="#"
+              href="mailto:SumerFade@gmail.com"
               className="text-filmbox-text-muted hover:text-filmbox-text-secondary transition-colors"
             >
               Contact

@@ -6,9 +6,9 @@ import { Cpu, Sun, Beaker, Layers, Film, Zap } from 'lucide-react';
 const techFeatures = [
   { icon: Cpu, title: 'GPU Accelerated', desc: 'Real-time performance on modern GPUs.' },
   { icon: Sun, title: 'HDR Support', desc: 'Tone-managed up to 1000 nits.' },
-  { icon: Beaker, title: 'ACES Workflow', desc: 'ACES-cct and color-managed pipelines.' },
-  { icon: Layers, title: 'LUT Export', desc: 'Export .cube, .3dl, .csp formats.' },
-  { icon: Film, title: 'Host Apps', desc: 'Resolve, Nuke, Premiere, After Effects.' },
+  { icon: Beaker, title: 'WORKFLOW', desc: 'Scene Reffered and display referred workflow' },
+  { icon: Layers, title: 'LUT Export', desc: 'Export .cube, 17X17,35X35,65X65 formats.' },
+  { icon: Film, title: 'Host Apps', desc: 'compatible only in resolve.' },
   { icon: Zap, title: 'Real-time', desc: 'Interactive adjustments with live preview.' },
 ];
 

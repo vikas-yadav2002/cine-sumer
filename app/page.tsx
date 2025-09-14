@@ -1,7 +1,7 @@
 import { Navbar } from '@/components/site/Navbar';
 import { Hero } from '@/components/filmbox/Hero';
 import { BeforeAfter } from '@/components/filmbox/BeforeAfter';
-import { FeatureTeasers } from '@/components/filmbox/FeatureTeasers';
+import { FeatureStages } from '@/components/filmbox/FeatureTeasers';
 import { FeatureSection } from '@/components/filmbox/FeatureSection';
 import { Showcase } from '@/components/filmbox/Showcase';
 import { TechGrid } from '@/components/filmbox/TechGrid';
@@ -20,14 +20,14 @@ export default function Home() {
       <Navbar />
       <Hero />
       <BeforeAfter />
-      <FeatureTeasers />
+      <FeatureStages />
       
       <FeatureSection
         title="Print Film Profiles"
         copy="Authentic print looks with calibrated tone and color response. Every profile is meticulously crafted from real film measurements."
         media={{
           type: 'image',
-          src: 'https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg',
+          src: '/printProfile/1.jpg',
           alt: 'Film print profiles showcase',
         }}
         align="left"
