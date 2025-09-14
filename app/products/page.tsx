@@ -6,8 +6,9 @@ import { Check } from "lucide-react";
 const plans = [
   {
     name: "Quarterly License",
-    price: "$39", // $39 ≈ ₹3250 (you can adjust exchange rate)
+    price: "$39",
     description: "Billed every 3 months",
+    link: "https://buymeacoffee.com/cinesumerb/e/452118",
     features: [
       "All film stock profiles",
       "No updates included",
@@ -18,8 +19,9 @@ const plans = [
   },
   {
     name: "Yearly License",
-    price: "$99", // $99 ≈ ₹8250
+    price: "$99",
     description: "Best value, billed annually",
+    link: "https://buymeacoffee.com/cinesumerb/e/452628",
     features: [
       "All film stock profiles",
       "Updates until license expiry",
@@ -30,8 +32,9 @@ const plans = [
   },
   {
     name: "Perpetual License",
-    price: "$249", // $249 ≈ ₹20,750
+    price: "$249",
     description: "One-time purchase, lifetime access",
+    link: "https://buymeacoffee.com/cinesumerb/e/452635",
     features: [
       "All film stock profiles",
       "Lifetime updates",
@@ -44,7 +47,6 @@ const plans = [
     ],
   },
 ];
-
 
 export default function PricingPage() {
   return (
@@ -91,7 +93,7 @@ export default function PricingPage() {
 
                 {/* CTA */}
                 <a
-                  href="https://buymeacoffee.com/cinesumerb"
+                  href={plan.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center rounded-full px-6 py-3 text-base font-semibold text-white bg-black hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-filmbox-blue focus-visible:ring-offset-filmbox-bg transition-colors"
