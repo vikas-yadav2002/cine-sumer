@@ -54,7 +54,7 @@ export function Navbar() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-filmbox-text-secondary hover:text-filmbox-text-primary transition-colors"
+                  className="text-white hover:text-filmbox-text-primary transition-colors"
                 >
                   {item.name}
                 </a>
