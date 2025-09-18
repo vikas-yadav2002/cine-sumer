@@ -20,7 +20,7 @@ const faqs = [
     answer: 'No, it works offline once installed.',
   },
   {
-    question: 'What configurations can Filmverse DCTLs run on?',
+    question: 'What configurations can sumerFade DCTLs run on?',
     answer:
       'They run smoothly on Nvidia, Apple Silicon, and AMD architectures. Still, we strongly recommend trying the TEST versions first for compatibility.',
   },
