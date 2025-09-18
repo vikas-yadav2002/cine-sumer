@@ -3,7 +3,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Youtube, Instagram, Link } from "lucide-react";
-import { AnimatedPreloader } from "./AnimatedLoader";
 
 export function Hero() {
   const [isReady, setIsReady] = useState(false);
@@ -29,7 +28,6 @@ export function Hero() {
 
   return (
     <>
-      <AnimatedPreloader text="CINESUMER" targetReady={isReady} />
       <section className="relative min-h-screen flex items-end justify-start overflow-hidden bg-[#121212]">
         {/* Overlay while loading */}
         <div
