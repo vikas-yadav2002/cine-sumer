@@ -56,27 +56,41 @@ const roadmap = [
 
 export default function Roadmap() {
   return (
-    <section className="w-full bg-filmbox-bg text-white py-16">
+    <section className="w-full bg-black text-white py-16">
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-4xl font-bold mb-12 text-center">SumerFade Roadmap</h2>
-        <div className="relative border-l-2 border-filmbox-blue">
+        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center tracking-tight">
+          SumerFade Roadmap
+        </h2>
+
+        <div className="relative border-l-2 border-zinc-700 pl-8">
           {roadmap.map((milestone, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="mb-12 ml-6"
+              className="mb-14"
             >
-              <div className="absolute w-4 h-4 bg-filmbox-blue rounded-full -left-2.5 border border-white"></div>
-              <h3 className="text-2xl font-semibold">{milestone.version}</h3>
+              {/* Timeline Dot */}
+              <div className="absolute w-4 h-4 bg-white rounded-full -left-[9px] border-4 border-black"></div>
+
+              <h3 className="text-2xl font-semibold mb-1 text-white">
+                {milestone.version}
+              </h3>
+              
               {milestone.tag && (
-                <span className="text-sm text-gray-400">{milestone.tag}</span>
+                <span className="inline-block text-sm text-zinc-500 mb-3">
+                  {milestone.tag}
+                </span>
               )}
-              <ul className="list-disc list-inside mt-3 space-y-2 text-gray-300">
+
+              <ul className="space-y-3 text-zinc-300">
                 {milestone.items.map((item, i) => (
-                  <li key={i}>{item}</li>
+                  <li key={i} className="flex items-start">
+                    <span className="text-emerald-400 mr-3 mt-1.5">•</span>
+                    <span>{item}</span>
+                  </li>
                 ))}
               </ul>
             </motion.div>

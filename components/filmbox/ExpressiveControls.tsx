@@ -1,3 +1,6 @@
+
+
+
 "use client";
 
 import { useCallback } from "react";
@@ -5,7 +8,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 
-// Your video slides (title + description + video path)
+
 const videoSlides = [
   {
     id: "film-grain",
@@ -28,13 +31,13 @@ const videoSlides = [
       "Replicates the slight frame instability of projected film reels. It introduces subtle motion and imperfection for a filmic feel.",
     video: "/LAB/videos/3GATEWEAVE.mov",
   },
-  {
-    id: "bleach-bypass",
-    title: "BLEACH BYPASS",
-    description:
-      "Simulates the bleach bypass process with a dedicated Silver control, adding gritty contrast and desaturated tones while retaining cinematic depth.",
-    video: "/LAB/videos/BLEACH-BYPASS.mov",
-  },
+  // {
+  //   id: "bleach-bypass",
+  //   title: "BLEACH BYPASS",
+  //   description:
+  //     "Simulates the bleach bypass process with a dedicated Silver control, adding gritty contrast and desaturated tones while retaining cinematic depth.",
+  //   video: "/LAB/videos/BLEACH-BYPASS.mov",
+  // },
   {
     id: "film-saturation",
     title: "FILM SATURATION",
@@ -63,103 +66,125 @@ const videoSlides = [
       "Balances color temperature and tint with precision, shifting warm–cool and green–magenta tones without crushing shadows or black levels.",
     video: "/LAB/videos/TEMP & TINT.mov",
   },
-  {
-    id: "hue-split",
-    title: "HUE SPLIT & CYAN",
-    description:
-      "Enhances color separation and contrast through a hue split system, creating stronger cinematic depth and refined tonal balance.",
-    video: "/LAB/videos/HUE SPLIT AND CYAN.mov",
-  },
-  {
-    id: "split-tone",
-    title: "SPLIT TONE",
-    description:
-      "Two modes: CONTEMPORARY (warm highlights + cool shadows for a modern look) and RETRO (cool highlights + warm shadows for vintage feel).",
-    video: "/LAB/videos/SPLIT-TONE.mov",
-  },
-  {
-    id: "printstock",
-    title: "PRINTSTOCK",
-    description:
-      "Includes Kodak 2383 (D55, D60, D65) and Fuji 3513 (D55, D60, D65) emulations, accurately reproducing classic print film contrast and color balance.",
-    video: "/LAB/videos/PRINTSTOCK.mov",
-  },
-  {
-    id: "negative-stock",
-    title: "NEGATIVE STOCK",
-    description:
-      "Simulates various film negative responses, shaping contrast and color behavior at the foundational capture stage.",
-    video: "/LAB/videos/Negtaive stock.mov",
-  },
-  {
-    id: "print-look",
-    title: "PRINT LOOK",
-    description:
-      "Original creative grades inspired by modern cinematography, designed to capture mood and tone rather than replicate a single stock.",
-    video: "/LAB/videos/PRINT LOOK.mov",
-  },
+  // {
+  //   id: "hue-split",
+  //   title: "HUE SPLIT & CYAN",
+  //   description:
+  //     "Enhances color separation and contrast through a hue split system, creating stronger cinematic depth and refined tonal balance.",
+  //   video: "/LAB/videos/HUE SPLIT AND CYAN.mov",
+  // },
+  // {
+  //   id: "split-tone",
+  //   title: "SPLIT TONE",
+  //   description:
+  //     "Two modes: CONTEMPORARY (warm highlights + cool shadows for a modern look) and RETRO (cool highlights + warm shadows for vintage feel).",
+  //   video: "/LAB/videos/SPLIT-TONE.mov",
+  // },
+  // {
+  //   id: "printstock",
+  //   title: "PRINTSTOCK",
+  //   description:
+  //     "Includes Kodak 2383 (D55, D60, D65) and Fuji 3513 (D55, D60, D65) emulations, accurately reproducing classic print film contrast and color balance.",
+  //   video: "/LAB/videos/PRINTSTOCK.mov",
+  // },
+  // {
+  //   id: "negative-stock",
+  //   title: "NEGATIVE STOCK",
+  //   description:
+  //     "Simulates various film negative responses, shaping contrast and color behavior at the foundational capture stage.",
+  //   video: "/LAB/videos/Negtaive stock.mov",
+  // },
+  // {
+  //   id: "print-look",
+  //   title: "PRINT LOOK",
+  //   description:
+  //     "Original creative grades inspired by modern cinematography, designed to capture mood and tone rather than replicate a single stock.",
+  //   video: "/LAB/videos/PRINT LOOK.mov",
+  // },
 ];
 
 
 export default function VideoCarousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, slidesToScroll: 1, align: "center" });
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: true,
+    align: "start",
+    slidesToScroll: 1,        // Scroll exactly one card at a time
+    containScroll: "trimSnaps",
+  });
 
   const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
 
   return (
-    <section className="bg-neutral-900 text-white py-16 px-6">
-      <h2 className="text-center text-3xl font-semibold mb-10">Cinematic Film Effects</h2>
+    <section className="bg-black text-white py-16 md:py-24">
+      <div className="w-full px-4 md:px-8">
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center text-4xl md:text-5xl font-bold tracking-tight mb-4"
+        >
+          Cinematic Film Effects
+        </motion.h2>
+        
+        <p className="text-center text-zinc-400 text-lg max-w-3xl mx-auto mb-12">
+          Experience the authentic analog tools that bring digital footage to life
+        </p>
 
-      {/* Carousel Container */}
-      <div className="relative">
-        <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex">
-            {videoSlides.map((slide) => (
-              <div
-                key={slide.id}
-                className="min-w-[90%] sm:min-w-[60%] lg:min-w-[40%] px-6" // ⬅️ wider cards
-              >
-                <SlideCard slide={slide} />
-              </div>
-            ))}
+        {/* Full-width Carousel */}
+        <div className="relative">
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex gap-6 md:gap-8">
+              {videoSlides.map((slide) => (
+                <div
+                  key={slide.id}
+                  className="flex-none w-full sm:w-1/2 lg:w-1/3"   // 1 | 2 | 3 cards visible
+                >
+                  <SlideCard slide={slide} />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Controls */}
-        <button
-          onClick={scrollPrev}
-          className="absolute left-0 top-1/2 -translate-y-1/2 bg-black/50 p-3 rounded-full"
-        >
-          <ChevronLeft className="w-6 h-6 text-white" />
-        </button>
-        <button
-          onClick={scrollNext}
-          className="absolute right-0 top-1/2 -translate-y-1/2 bg-black/50 p-3 rounded-full"
-        >
-          <ChevronRight className="w-6 h-6 text-white" />
-        </button>
+          {/* Navigation Buttons - Positioned outside for full width feel */}
+          <button
+            onClick={scrollPrev}
+            className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 bg-black border border-zinc-700 hover:border-zinc-500 p-4 rounded-full transition-all hover:scale-110 text-zinc-400 hover:text-white shadow-2xl z-10"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft className="w-7 h-7" />
+          </button>
+
+          <button
+            onClick={scrollNext}
+            className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 bg-black border border-zinc-700 hover:border-zinc-500 p-4 rounded-full transition-all hover:scale-110 text-zinc-400 hover:text-white shadow-2xl z-10"
+            aria-label="Next slide"
+          >
+            <ChevronRight className="w-7 h-7" />
+          </button>
+        </div>
       </div>
     </section>
   );
 }
 
-// Single Slide
+// Single Slide Card (kept clean & cinematic)
 function SlideCard({ slide }: { slide: any }) {
   return (
-    <div className="bg-neutral-800 rounded-2xl p-6 flex flex-col shadow-lg relative">
-      <div className="flex">
+    <div className="bg-zinc-950 border border-zinc-800 rounded-3xl p-6 flex flex-col shadow-2xl h-full">
+      <div className="flex gap-5">
         {/* Vertical Knob */}
-        <div className="relative h-72 w-2 bg-neutral-700 rounded-full mr-4 overflow-hidden">
+        <div className="relative h-72 w-2.5 bg-zinc-900 rounded-full mr-2 overflow-hidden flex-shrink-0">
           <motion.div
-            className="w-2 h-8 bg-white rounded-full shadow-lg border border-neutral-400 absolute left-0"
-            animate={{ top: [0, 260, 0] }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            className="w-full h-9 bg-white rounded-full shadow-md absolute left-0"
+            animate={{ top: [0, 255, 0] }}
+            transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
           />
         </div>
 
         {/* Video */}
-        <div className="relative flex-1 h-72 rounded-xl overflow-hidden">
+        <div className="relative flex-1 h-72 rounded-2xl overflow-hidden border border-zinc-800">
           <video
             src={slide.video}
             autoPlay
@@ -168,12 +193,18 @@ function SlideCard({ slide }: { slide: any }) {
             playsInline
             className="w-full h-full object-cover"
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
         </div>
       </div>
 
-      <h3 className="text-xl font-semibold mt-4">{slide.title}</h3>
-      <p className="text-base text-neutral-400 mt-2">{slide.description}</p>
+      <div className="mt-6">
+        <h3 className="text-2xl font-bold text-white tracking-tight">
+          {slide.title}
+        </h3>
+        <p className="text-zinc-400 leading-relaxed mt-3 text-[15px]">
+          {slide.description}
+        </p>
+      </div>
     </div>
   );
 }
-

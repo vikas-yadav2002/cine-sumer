@@ -9,9 +9,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['Inter', 'Manrope', 'ui-sans-serif', 'system-ui'],
-      },
+     fontFamily: {
+      // Replace this line:
+      // sans: ['Inter', 'Manrope', 'ui-sans-serif', 'system-ui'],
+
+      // With this:
+      helvetica: [
+        'var(--font-helvetica)',
+        'Helvetica Neue',
+        'Helvetica',
+        'Arial',
+        'sans-serif'
+      ],
+      sans: ['var(--font-helvetica)', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'], // fallback
+    },
       colors: {
         // Filmbox brand colors
         filmbox: {

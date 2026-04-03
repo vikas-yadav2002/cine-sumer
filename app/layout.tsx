@@ -1,12 +1,7 @@
+// app/layout.tsx
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "600", "700", "800", "900"],
-  variable: "--font-inter",
-});
+import { helvetica } from './fonts';   // ← Import Helvetica
 
 export const metadata: Metadata = {
   title: 'CINESUMER - Precision-crafted looks for colorists',
@@ -47,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={helvetica.variable}>
       <head>
         {/* Structured Data for SEO */}
         <script
@@ -66,14 +61,14 @@ export default function RootLayout({
               category: 'Software',
               offers: {
                 '@type': 'Offer',
-                url: 'https://www.cinesumer.com', // replace with your domain
+                url: 'https://www.cinesumer.com',
                 availability: 'https://schema.org/InStock',
               },
             }),
           }}
         />
       </head>
-      <body className="font-sans antialiased bg-[#121212] text-white">
+      <body className="font-helvetica antialiased bg-[#121212] text-white">
         {children}
       </body>
     </html>

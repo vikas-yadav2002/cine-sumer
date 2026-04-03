@@ -14,7 +14,7 @@ const deepFeatures = [
 
 export function DeepFeatures() {
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-16 md:py-24 bg-black">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -23,10 +23,10 @@ export function DeepFeatures() {
           viewport={{ once: true, margin: '-100px' }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-filmbox-text-primary mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white mb-4">
             Designer Controls
           </h2>
-          <p className="text-lg text-filmbox-text-secondary">
+          <p className="text-lg text-zinc-400">
             Precise tools for the discerning colorist
           </p>
         </motion.div>
@@ -40,15 +40,15 @@ export function DeepFeatures() {
               transition={{ duration: 0.4, delay: index * 0.1 }}
               viewport={{ once: true, margin: '-100px' }}
               whileHover={{ y: -4, scale: 1.02 }}
-              className="rounded-2xl bg-filmbox-card border border-filmbox-border p-8 shadow-cinematic hover:shadow-[0_25px_70px_-20px_rgba(0,0,0,0.8)] transition-all duration-300"
+              className="rounded-2xl bg-zinc-950 border border-zinc-800 p-8 shadow-xl hover:shadow-2xl transition-all duration-300 group"
             >
-              <div className="w-12 h-12 bg-filmbox-blue/10 rounded-xl flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-zinc-900 border border-zinc-700 rounded-xl flex items-center justify-center mb-6 group-hover:border-zinc-600 transition-colors">
                 <feature.icon className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-filmbox-text-primary mb-3">
+              <h3 className="text-lg font-bold text-white mb-3">
                 {feature.title}
               </h3>
-              <p className="text-filmbox-text-secondary leading-7">
+              <p className="text-zinc-400 leading-7">
                 {feature.desc}
               </p>
             </motion.div>

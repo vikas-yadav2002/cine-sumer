@@ -17,6 +17,9 @@ export function BeforeAfter() {
     { before: '/beforeafter/before3.png', after: '/beforeafter/after3.png' },
     { before: '/beforeafter/before4.png', after: '/beforeafter/after4.png' },
     { before: '/beforeafter/before5.png', after: '/beforeafter/after5.png' },
+    { before: '/beforeafter/before6.png', after: '/beforeafter/after6.png' },
+    { before: '/beforeafter/before7.png', after: '/beforeafter/after7.png' },
+    { before: '/beforeafter/before8.png', after: '/beforeafter/after8.png' },
   ];
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -32,16 +35,16 @@ export function BeforeAfter() {
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
-    setSliderPosition(50); // reset slider
+    setSliderPosition(50);
   };
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-    setSliderPosition(50); // reset slider
+    setSliderPosition(50);
   };
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-16 md:py-24 bg-black">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         {/* Section heading */}
         <motion.div
@@ -51,10 +54,10 @@ export function BeforeAfter() {
           viewport={{ once: true, margin: '-100px' }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-filmbox-text-primary mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white mb-4">
             See the Difference
           </h2>
-          <p className="text-lg text-filmbox-text-secondary max-w-2xl mx-auto">
+          <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
             Transform your footage with authentic film characteristics
           </p>
         </motion.div>
@@ -65,7 +68,7 @@ export function BeforeAfter() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true, margin: '-100px' }}
-          className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-cinematic"
+          className="relative max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-zinc-800 bg-black"
         >
           {/* Before/After comparison */}
           <div
@@ -84,7 +87,7 @@ export function BeforeAfter() {
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1000px"
               />
-              <div className="absolute bottom-4 left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
+              <div className="absolute bottom-4 left-4 bg-black/80 text-white px-4 py-1.5 rounded-full text-sm font-medium backdrop-blur-sm">
                 Original
               </div>
             </div>
@@ -98,21 +101,21 @@ export function BeforeAfter() {
                 src={slides[currentSlide].after}
                 alt="Processed footage"
                 fill
-                className="object-cover brightness-110 contrast-110 saturate-110 sepia-[0.1]"
+                className="object-cover brightness-110 contrast-110 saturate-110"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1000px"
               />
-              <div className="absolute bottom-4 right-4 bg-filmbox-primary/90 text-white px-3 py-1 rounded-full text-sm">
+              <div className="absolute bottom-4 right-4 bg-white/90 text-black px-4 py-1.5 rounded-full text-sm font-medium backdrop-blur-sm">
                 SumerFade
               </div>
             </div>
 
             {/* Draggable slider handle */}
             <div
-              className="absolute top-0 bottom-0 w-0.5 bg-filmbox-primary cursor-col-resize"
+              className="absolute top-0 bottom-0 w-0.5 bg-white cursor-col-resize shadow-xl"
               style={{ left: `${sliderPosition}%` }}
             >
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-filmbox-primary rounded-full border-2 border-white shadow-lg flex items-center justify-center">
-                <div className="w-1 h-4 bg-white rounded-full"></div>
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-9 h-9 bg-white rounded-full border-4 border-zinc-900 shadow-2xl flex items-center justify-center">
+                <div className="w-1.5 h-5 bg-zinc-900 rounded-full"></div>
               </div>
             </div>
           </div>
@@ -120,20 +123,21 @@ export function BeforeAfter() {
           {/* Navigation arrows */}
           <button
             onClick={prevSlide}
-            className="absolute top-1/2 -left-12 transform -translate-y-1/2 p-3 rounded-full bg-black/50 text-white hover:bg-black/70 transition"
+            className="absolute top-1/2 -left-14 md:-left-16 p-4 rounded-full bg-black border border-zinc-700 hover:border-zinc-500 text-zinc-400 hover:text-white transition-all hover:scale-110 shadow-xl"
           >
-            <ChevronLeft size={24} />
+            <ChevronLeft size={28} />
           </button>
+
           <button
             onClick={nextSlide}
-            className="absolute top-1/2 -right-12 transform -translate-y-1/2 p-3 rounded-full bg-black/50 text-white hover:bg-black/70 transition"
+            className="absolute top-1/2 -right-14 md:-right-16 p-4 rounded-full bg-black border border-zinc-700 hover:border-zinc-500 text-zinc-400 hover:text-white transition-all hover:scale-110 shadow-xl"
           >
-            <ChevronRight size={24} />
+            <ChevronRight size={28} />
           </button>
         </motion.div>
 
         {/* Dots indicator */}
-        <div className="flex justify-center mt-6 space-x-2">
+        <div className="flex justify-center mt-8 space-x-3">
           {slides.map((_, i) => (
             <button
               key={i}
@@ -141,8 +145,10 @@ export function BeforeAfter() {
                 setCurrentSlide(i);
                 setSliderPosition(50);
               }}
-              className={`w-3 h-3 rounded-full ${
-                i === currentSlide ? 'bg-filmbox-primary' : 'bg-gray-500'
+              className={`w-3 h-3 rounded-full transition-all ${
+                i === currentSlide 
+                  ? 'bg-white scale-125' 
+                  : 'bg-zinc-700 hover:bg-zinc-500'
               }`}
             />
           ))}

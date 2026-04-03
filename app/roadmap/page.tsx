@@ -5,12 +5,11 @@ import Roadmap from "@/components/roadmap/roadmap";
 import { Footer } from "@/components/site/Footer";
 import { Navbar } from "@/components/site/Navbar";
 
-
 export default function RoadmapPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-filmbox-bg text-white">
+      <main className="min-h-screen bg-black text-white">
         {/* SumerFade Intro Section */}
         <section id="intro" className="py-16 px-6 max-w-6xl mx-auto">
           <AboutSumerFade />

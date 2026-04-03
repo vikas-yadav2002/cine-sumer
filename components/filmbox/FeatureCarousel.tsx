@@ -30,7 +30,7 @@ export function FeatureCarousel() {
   }, [emblaApi]);
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-16 md:py-24 bg-black">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -39,11 +39,11 @@ export function FeatureCarousel() {
           viewport={{ once: true, margin: '-100px' }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-filmbox-text-primary mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white mb-4">
             Feature Highlights
           </h2>
-          <p className="text-lg text-filmbox-text-secondary">
-            Explore the tools that make Filmbox powerful
+          <p className="text-lg text-zinc-400">
+            Explore the tools that make SumerFade powerful
           </p>
         </motion.div>
 
@@ -57,9 +57,9 @@ export function FeatureCarousel() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   viewport={{ once: true, margin: '-100px' }}
-                  className="embla__slide flex-none min-w-0 w-80 rounded-2xl bg-filmbox-card border border-filmbox-border shadow-cinematic overflow-hidden"
+                  className="embla__slide flex-none min-w-0 w-80 rounded-2xl bg-zinc-950 border border-zinc-800 shadow-xl overflow-hidden"
                 >
-                  <div className="aspect-video">
+                  <div className="aspect-video relative">
                     <Image
                       src={feature.image}
                       alt={feature.title}
@@ -69,7 +69,7 @@ export function FeatureCarousel() {
                     />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-lg font-bold text-filmbox-text-primary">
+                    <h3 className="text-lg font-bold text-white">
                       {feature.title}
                     </h3>
                   </div>
@@ -78,20 +78,21 @@ export function FeatureCarousel() {
             </div>
           </div>
 
+          {/* Navigation Buttons */}
           <button
             onClick={scrollPrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 p-2 rounded-full bg-filmbox-card border border-filmbox-border text-filmbox-text-primary hover:bg-filmbox-border/40 transition-colors shadow-cinematic"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 p-3 rounded-full bg-black border border-zinc-700 text-zinc-400 hover:text-white hover:bg-zinc-900 hover:border-zinc-600 transition-all shadow-xl"
             aria-label="Previous slide"
           >
-            <ChevronLeft size={20} />
+            <ChevronLeft size={24} />
           </button>
 
           <button
             onClick={scrollNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 p-2 rounded-full bg-filmbox-card border border-filmbox-border text-filmbox-text-primary hover:bg-filmbox-border/40 transition-colors shadow-cinematic"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 p-3 rounded-full bg-black border border-zinc-700 text-zinc-400 hover:text-white hover:bg-zinc-900 hover:border-zinc-600 transition-all shadow-xl"
             aria-label="Next slide"
           >
-            <ChevronRight size={20} />
+            <ChevronRight size={24} />
           </button>
         </div>
       </div>
