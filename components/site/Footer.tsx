@@ -9,9 +9,9 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-white rounded-md flex items-center justify-center">
-              <span className="text-sm font-bold text-black">CS</span>
-            </div>
+            <div className="w-8 h-8 bg-black rounded-md flex items-center justify-center">
+                <span className="text-sm font-bold text-white">CS</span>
+              </div>
             <span className="text-lg font-semibold text-white">
               CINESUMER
             </span>

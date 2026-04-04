@@ -1,3 +1,4 @@
+
 import { Footer } from "@/components/site/Footer";
 import { Navbar } from "@/components/site/Navbar";
 import TermsAndConditions from "@/components/terms&condition/Terms&Condittion";
@@ -40,7 +41,7 @@ const plans = [
   },
   {
     name: "Perpetual License",
-    price: "$299",
+    price: "$349",
     originalPrice: "$449",
     period: "One-time purchase • Lifetime access",
     link: "https://www.buymeacoffee.com/cinesumerb/e/452635/discounts/11177",

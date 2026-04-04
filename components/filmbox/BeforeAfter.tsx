@@ -44,7 +44,7 @@ export function BeforeAfter() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-black">
+    <section className="py-24 md:py-32 bg-black">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         {/* Section heading */}
         <motion.div
@@ -68,11 +68,11 @@ export function BeforeAfter() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true, margin: '-100px' }}
-          className="relative max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-zinc-800 bg-black"
+          className="relative max-w-6xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-zinc-800 bg-black"
         >
           {/* Before/After comparison */}
           <div
-            className="relative w-full h-[400px] md:h-[500px] cursor-col-resize select-none"
+            className="relative w-full h-[520px] md:h-[650px] lg:h-[720px] cursor-col-resize select-none"
             onMouseMove={handleMouseMove}
             onMouseDown={handleMouseDown}
             onMouseUp={handleMouseUp}
@@ -125,14 +125,14 @@ export function BeforeAfter() {
             onClick={prevSlide}
             className="absolute top-1/2 -left-14 md:-left-16 p-4 rounded-full bg-black border border-zinc-700 hover:border-zinc-500 text-zinc-400 hover:text-white transition-all hover:scale-110 shadow-xl"
           >
-            <ChevronLeft size={28} />
+            <ChevronLeft size={34} />
           </button>
 
           <button
             onClick={nextSlide}
             className="absolute top-1/2 -right-14 md:-right-16 p-4 rounded-full bg-black border border-zinc-700 hover:border-zinc-500 text-zinc-400 hover:text-white transition-all hover:scale-110 shadow-xl"
           >
-            <ChevronRight size={28} />
+            <ChevronRight size={34} />
           </button>
         </motion.div>
 

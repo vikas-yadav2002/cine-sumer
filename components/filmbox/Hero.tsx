@@ -64,7 +64,7 @@ export function Hero() {
                 transition={{ duration: 1.5, ease: "easeInOut" }}
                 className="absolute inset-0 w-full h-full object-cover"
               />
-            ) : null
+            ) : null,
           )}
         </AnimatePresence>
       </div>
@@ -81,96 +81,107 @@ export function Hero() {
       />
 
       {/* Foreground content */}
-      <div className="relative z-30 max-w-5xl px-6 md:px-12 pb-20 md:pb-28">
+      <div className="relative z-30 max-w-5xl px-6 md:px-12 pb-1 md:pb-10">
+        
+        
+
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isReady ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="space-y-10"
-        >
-          {/* Tagline */}
-          <motion.h1
-  className="
-    text-white
-    font-extrabold
-    tracking-tighter
-    leading-[0.95]
-
-    text-5xl
-    sm:text-6xl
-    md:text-7xl
-    lg:text-8xl
-    xl:text-[5.5rem]
-
-    max-w-[18ch]
-  "
+  initial={{ opacity: 0, y: 30 }}
+  animate={isReady ? { opacity: 1, y: 0 } : {}}
+  transition={{ duration: 0.7, delay: 0.3 }}
+  className="space-y-10"
 >
-  Precision-crafted looks
-  <br />
-  for colorists who
-  <br />
-  refuse to fake it.
-</motion.h1>
+  {/* Tagline */}
+  <motion.h1
+    className="
+      text-white
+      font-extrabold
+      tracking-tighter
+      leading-[0.95]
 
-          {/* Minimalist Icon Links - Hover makes text & icon brighter white */}
-          <motion.div className="flex flex-wrap gap-x-9 gap-y-5">
-            <a
-              href="https://www.youtube.com/@CINESUMER/videos"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-3 text-zinc-300 hover:text-white transition-all duration-300"
-              aria-label="YouTube"
-            >
-              <Youtube 
-                size={26} 
-                className="group-hover:scale-110 transition-transform" 
-              />
-              <span className="font-medium text-lg tracking-wide">YouTube</span>
-            </a>
+      text-4xl
+      sm:text-5xl
+      md:text-6xl
+      lg:text-7xl
+      xl:text-[4.5rem]
 
-            <a
-              href="https://www.instagram.com/cinesumer/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-3 text-zinc-300 hover:text-white transition-all duration-300"
-              aria-label="Instagram"
-            >
-              <Instagram 
-                size={26} 
-                className="group-hover:scale-110 transition-transform" 
-              />
-              <span className="font-medium text-lg tracking-wide">Instagram</span>
-            </a>
+      max-w-[18ch]
+    "
+  >
+    Precision-crafted
+    <br />
+    looks for colorists
+    <br />
+    who refuse to fake it.
+  </motion.h1>
 
-            <a
-              href="https://buymeacoffee.com/cinesumerb/e/449696"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-3 text-zinc-300 hover:text-white transition-all duration-300"
-              aria-label="Demo DCTL"
-            >
-              <Link 
-                size={26} 
-                className="group-hover:scale-110 transition-transform" 
-              />
-              <span className="font-medium text-lg tracking-wide">Demo Free DCTL</span>
-            </a>
+  {/* Minimalist Icon Links */}
+  <motion.div className="flex flex-wrap gap-x-9 gap-y-5">
+    <a
+      href="https://www.youtube.com/@CINESUMER/videos"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex items-center gap-3 text-zinc-300 hover:text-white transition-all duration-300"
+      aria-label="YouTube"
+    >
+      <Youtube
+        size={26}
+        className="group-hover:scale-110 transition-transform"
+      />
+      <span className="font-medium text-lg tracking-wide">
+        YouTube
+      </span>
+    </a>
 
-            <a
-              href="https://buymeacoffee.com/cinesumerb/e/447385"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-3 text-zinc-300 hover:text-white transition-all duration-300"
-              aria-label="PDF"
-            >
-              <Link 
-                size={26} 
-                className="group-hover:scale-110 transition-transform" 
-              />
-              <span className="font-medium text-lg tracking-wide">PDF</span>
-            </a>
-          </motion.div>
-        </motion.div>
+    <a
+      href="https://www.instagram.com/cinesumer/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex items-center gap-3 text-zinc-300 hover:text-white transition-all duration-300"
+      aria-label="Instagram"
+    >
+      <Instagram
+        size={26}
+        className="group-hover:scale-110 transition-transform"
+      />
+      <span className="font-medium text-lg tracking-wide">
+        Instagram
+      </span>
+    </a>
+
+    <a
+      href="/products/sumerfade-lite"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex items-center gap-3 text-zinc-300 hover:text-white transition-all duration-300"
+      aria-label="Demo DCTL"
+    >
+      <Link
+        size={26}
+        className="group-hover:scale-110 transition-transform"
+      />
+      <span className="font-medium text-lg tracking-wide">
+        Free DCTL
+      </span>
+    </a>
+
+    <a
+      href="https://buymeacoffee.com/cinesumerb/e/447385"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex items-center gap-3 text-zinc-300 hover:text-white transition-all duration-300"
+      aria-label="PDF"
+    >
+      <Link
+        size={26}
+        className="group-hover:scale-110 transition-transform"
+      />
+      <span className="font-medium text-lg tracking-wide">
+        PDF
+      </span>
+    </a>
+  </motion.div>
+</motion.div>
       </div>
     </section>
   );

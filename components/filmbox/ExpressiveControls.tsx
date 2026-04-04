@@ -219,11 +219,11 @@ const videoSlides = [
     video: "/LAB/videos/SKIN CONTROL.mov",
   },
   {
-    id: "temp-tint",
-    title: "TEMP & TINT",
+    id: "Film Damage",
+    title: "FILM DAMAGE",
     description:
-      "Achieve perfect color balance with cinematic-grade temperature and tint control. Fine-tune warmth and neutrality while preserving shadow depth and highlight integrity.",
-    video: "/LAB/videos/TEMP & TINT.mov",
+      "Create film imperfections in a digital pipeline by layering subtle damage elements—scratches, dust, hair, and chemical stains—over your final graded image.",
+    video: "/LAB/videos/Film Damage -Create film imperfections in a digital pipeline by layering subtle damage elements—scratches, dust, hair, and chemical stains—over your final graded image.png",
   },
 ];
 

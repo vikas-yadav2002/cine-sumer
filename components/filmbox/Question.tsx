@@ -11,9 +11,9 @@ const faqs = [
       'Yes, SumerFade works on Windows and Mac, but only inside DaVinci Resolve Studio.',
   },
   {
-    question: 'What’s the difference between SumerFade TEST -Lite, SumerFade, and SumerFade Pro?',
+    question: 'What’s the difference between SumerFade -Lite, SumerFade, and SumerFade Pro?',
     answer:
-      'SumerFade TEST -lite → Made only for testing before buying the full license.\n\nSumerFade → Limited-time access version.\n\nSumerFade Pro → Lifetime access version.',
+      'SumerFade -lite → Made only for testing before buying the full license.\n\nSumerFade → Limited-time access version.\n\nSumerFade Pro → Lifetime access version.',
   },
   {
     question: 'Does SumerFade require an internet connection?',
