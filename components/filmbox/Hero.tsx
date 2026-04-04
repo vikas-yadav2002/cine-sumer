@@ -14,7 +14,7 @@ export function Hero() {
     "/hero/4.png",
     "/hero/5.png",
     "/hero/6.png",
-    "/hero/7.png",
+    // "/hero/7.png",
     "/hero/8.png",
     "/hero/9.png",
     "/hero/12.png",
@@ -74,7 +74,7 @@ export function Hero() {
         aria-hidden="true"
         className="absolute inset-x-0 bottom-0 pointer-events-none z-20"
         style={{
-          height: "26rem",
+          height: "1rem",
           background:
             "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 35%, rgba(0,0,0,0.8) 65%, rgba(0,0,0,1) 88%)",
         }}
@@ -89,9 +89,28 @@ export function Hero() {
           className="space-y-10"
         >
           {/* Tagline */}
-          <motion.h1 className="text-white font-extrabold tracking-tighter text-4xl md:text-6xl leading-tight max-w-3xl">
-            Precision-crafted looks for colorists who refuse to fake it.
-          </motion.h1>
+          <motion.h1
+  className="
+    text-white
+    font-extrabold
+    tracking-tighter
+    leading-[0.95]
+
+    text-5xl
+    sm:text-6xl
+    md:text-7xl
+    lg:text-8xl
+    xl:text-[5.5rem]
+
+    max-w-[18ch]
+  "
+>
+  Precision-crafted looks
+  <br />
+  for colorists who
+  <br />
+  refuse to fake it.
+</motion.h1>
 
           {/* Minimalist Icon Links - Hover makes text & icon brighter white */}
           <motion.div className="flex flex-wrap gap-x-9 gap-y-5">
@@ -134,7 +153,7 @@ export function Hero() {
                 size={26} 
                 className="group-hover:scale-110 transition-transform" 
               />
-              <span className="font-medium text-lg tracking-wide">Demo DCTL</span>
+              <span className="font-medium text-lg tracking-wide">Demo Free DCTL</span>
             </a>
 
             <a
