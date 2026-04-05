@@ -110,7 +110,7 @@ export default function WorkSection() {
         The language of film, translated into code and colour.
         </p>
         <p className="text-white/40 mt-5 text-lg tracking-wide">
-          Film Emulation • Motion • Cinematic Looks
+          Film Emulation • Motion • Stocks Films
         </p>
       </motion.div>
 

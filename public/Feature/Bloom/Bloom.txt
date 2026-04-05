@@ -1,0 +1,6 @@
+Bloom
+Bloom is what film does when a lens meets more light than it was designed to contain — highlight energy scatters through the optics, softening edges and breathing luminance outward in a way digital sensors simply clip and discard. 
+Bloom is the soft glow you see around bright light sources on film — practical bulbs, windows, skin catching the sun.
+It starts in the lens, where light scatters at high-contrast edges, and then the emulsion takes over, amplifying that scatter through its layers until what was a clean highlight becomes something that breathes.
+It's not a filter sitting on top of your image, it's the optical path failing gracefully. 
+SumerFade's bloom works the same way: it finds the light, spreads it naturally, and rolls off the way a real optical path does — nothing like the uniform blur that passes for glow in most digital tools.

@@ -92,7 +92,7 @@ export default function StickyFilmStocks() {
             </div>
 
             {/* RIGHT IMAGE STACK */}
-
+{/* 
             <div className="lg:col-span-8 relative h-[85vh] overflow-hidden ">
 
               {stocks.map((stock, i) => {
@@ -125,7 +125,7 @@ export default function StickyFilmStocks() {
                       y,
                       zIndex: i + 1,
                     }}
-                    className="absolute inset-0"
+                    className="absolute inset-0 rounded-3xl"
                   >
 
                     <Image
@@ -133,7 +133,7 @@ export default function StickyFilmStocks() {
                       alt={stock.title}
                       fill
                       priority={i === 0}
-                      className="object-cover scale-[1.02]"
+                      className="object-cover scale-[1.02] rounded-3xl"
                     />
 
                   </motion.div>
@@ -142,7 +142,78 @@ export default function StickyFilmStocks() {
 
               })}
 
-            </div>
+            </div> */}
+            {/* RIGHT IMAGE STACK */}
+
+<div className="
+  lg:col-span-8
+  relative
+  h-[85vh]
+">
+
+  {/* Rounded clipping wrapper */}
+  <div className="
+    relative
+    w-full
+    h-full
+    rounded-3xl
+    overflow-hidden
+    shadow-2xl
+    border border-zinc-800
+  ">
+
+    {stocks.map((stock, i) => {
+
+      let y;
+
+      if (i === 0) {
+
+        y = 0;
+
+      } else {
+
+        const start = i / stocks.length;
+        const end = (i + 1) / stocks.length;
+
+        y = useTransform(
+          scrollYProgress,
+          [start, end],
+          ['100%', '0%']
+        );
+
+      }
+
+      return (
+
+        <motion.div
+          key={i}
+          style={{
+            y,
+            zIndex: i + 1,
+          }}
+          className="absolute inset-0"
+        >
+
+          <Image
+            src={stock.image}
+            alt={stock.title}
+            fill
+            priority={i === 0}
+            className="
+              object-cover
+              scale-[1.02]
+            "
+          />
+
+        </motion.div>
+
+      );
+
+    })}
+
+  </div>
+
+</div>
 
           </div>
 

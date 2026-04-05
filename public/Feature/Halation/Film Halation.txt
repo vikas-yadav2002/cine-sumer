@@ -1,0 +1,3 @@
+Film Halation
+
+Light doesn't stop at the emulsion surface — it pushes through, bounces off the film base, and re-exposes the layer from behind. That warm bleed around practical lights, windows, and high-contrast edges isn't added on top, it's happening inside the film itself. And how much it spreads depends on the format. 8mm halos hard and wide because the frame is tiny and the emulsion is thick relative to it. 16mm pulls back slightly. 35mm is subtler — present but controlled. 65mm is barely a whisper, the frame so large that the scatter barely registers. SumerFade models halation per-format, so the bleed you get on 8mm isn't the same as 65mm — because physically, it never was.

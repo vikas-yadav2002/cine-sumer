@@ -1,0 +1,5 @@
+Film Damage
+Film damage is the natural wear and imperfections that occur as physical film is handled, processed, and aged — including scratches, dust, dirt, hair and chemical marks.
+Unlike digital overlays, these flaws are organic and unpredictable, formed by real contact, motion, and environmental exposure. 
+SumerFade's damage isn't randomised texture dropped on top of your image. It's weighted the way real wear actually accumulates
+adding texture, depth, and a sense of history that makes the image feel lived-in rather than perfectly rendered.

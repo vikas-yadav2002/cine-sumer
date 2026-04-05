@@ -1,0 +1,4 @@
+Film grain 
+
+Film grain isn't noise — it's silver halide crystals clumping into randomised clusters during development, and their size, distribution, and luminance bias are all baked into the emulsion's 
+Presets and chemistry and their size is determined by the format the film was shot on. 16mm crystals are coarser and more visible because the frame is smaller and gets enlarged more. 35mm sits in the middle — structured, organic, present without being aggressive. 65mm grain is fine to the point of being felt rather than seen. SumerFade models this per-format, so the grain behaves the way developed silver actually does — heavier in the midtones, organic in its clumping, and responsive to the image underneath it rather than sitting flat on top of your footage like a texture overlay.
