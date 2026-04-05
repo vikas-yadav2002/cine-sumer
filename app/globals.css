@@ -142,3 +142,13 @@
 
 /* If you prefer not to use an image for film grain, an alternative (CSS noise):
    Create a repeating linear-gradient or base64 noise as a background. Grain image is recommended for performance. */
+
+
+   @keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

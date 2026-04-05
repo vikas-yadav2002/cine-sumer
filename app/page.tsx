@@ -15,6 +15,7 @@ import { FaqAccordion } from '@/components/filmbox/Question';
 import StickyFilmStocks from '@/components/filmbox/StickyFilmStocks';
 import { Navbar } from '@/components/site/Navbar';
 import { Footer } from '@/components/site/Footer';
+import WorkSection from '@/components/filmbox/WorkSection';
 
 export default function Home() {
   return (
@@ -44,6 +45,7 @@ export default function Home() {
       <DeepFeatures />
       {/* <RelatedProducts /> */}
       <ExpressiveControls />
+      <WorkSection/>
       <FaqAccordion/>
       <FinalCTA />
       <Footer />

@@ -16,37 +16,37 @@ const stocks: StockItem[] = [
     title: '',
     description:
       'Classic cinema print profile with rich blacks and balanced highlight response.',
-    image: 'hero/1.png',
+    image: '/hero/1.png',
   },
   {
     title: '',
     description:
       'Modern projection print with tighter contrast and cleaner highlights.',
-    image: 'hero/2.png',
+    image: '/hero/2.png',
   },
   {
     title: '',
     description:
       'Neutral tonal curve with subtle color compression.',
-    image: 'hero/3.png',
+    image: '/hero/3.png',
   },
   {
     title: '',
     description:
       'Soft highlight roll-off and smoother shadow transitions.',
-    image: 'hero/4.png',
+    image: '/hero/4.png',
   },
   {
     title: '',
     description:
       'Soft highlight roll-off and smoother shadow transitions.',
-    image: 'hero/5.png',
+    image: '/hero/5.png',
   },
   {
     title: '',
     description:
       'Soft highlight roll-off and smoother shadow transitions.',
-    image: 'hero/6.png',
+    image: '/hero/6.png',
   },
 ];
 
@@ -71,102 +71,75 @@ export default function StickyFilmStocks() {
 
       <div className="sticky top-0 h-screen flex items-center">
 
-        <div className="max-w-7xl mx-auto px-6 w-full">
+        <div className="max-w-[1500px] mx-auto px-6 w-full">
 
-          <div className="grid lg:grid-cols-5 gap-12 items-center">
+          <div className="grid lg:grid-cols-12 gap-12 items-center">
 
-            {/* LEFT — STICKY TEXT */}
+            {/* LEFT TEXT */}
 
-            <div className="lg:col-span-2 space-y-6">
+            <div className="lg:col-span-4 space-y-6">
 
-              <motion.h2
-                className="text-3xl md:text-4xl font-bold text-white"
-              >
+              <h2 className="text-4xl md:text-5xl font-bold text-white">
                 Print Film Stocks
-              </motion.h2>
+              </h2>
 
-              <motion.p
-                className="text-lg text-zinc-400 leading-relaxed"
-              >
+              <p className="text-lg text-zinc-400 leading-relaxed max-w-md">
                 Authentic print looks with calibrated tone and color
                 response. Each profile evolves visually as you explore
                 different film stock behaviours.
-              </motion.p>
-
-              {/* Dynamic titles */}
-
-              <div className="pt-6 space-y-3">
-
-                {stocks.map((stock, i) => {
-
-                  const start = i / stocks.length;
-                  const end = (i + 1) / stocks.length;
-
-                  const opacity = useTransform(
-                    scrollYProgress,
-                    [start, end],
-                    [0, 1]
-                  );
-
-                  return (
-
-                    <motion.div
-                      key={i}
-                      style={{ opacity }}
-                      className="text-white text-lg font-medium"
-                    >
-                      {stock.title}
-                    </motion.div>
-
-                  );
-                })}
-
-              </div>
+              </p>
 
             </div>
 
-            {/* RIGHT — IMAGES */}
+            {/* RIGHT IMAGE STACK */}
 
-            <div className="lg:col-span-3 relative h-[70vh]">
+            <div className="lg:col-span-8 relative h-[85vh] overflow-hidden ">
 
               {stocks.map((stock, i) => {
 
-                const start = i / stocks.length;
-                const end = (i + 1) / stocks.length;
+                let y;
 
-                const opacity = useTransform(
-                  scrollYProgress,
-                  [start, end],
-                  [0, 1]
-                );
+                if (i === 0) {
 
-                const y = useTransform(
-                  scrollYProgress,
-                  [start, end],
-                  [80, 0]
-                );
+                  y = 0;
+
+                } else {
+
+                  
+                  const start = i / stocks.length;
+                  const end = (i + 1) / stocks.length;
+
+                  y = useTransform(
+                    scrollYProgress,
+                    [start, end],
+                    ['100%', '0%']
+                  );
+
+                }
 
                 return (
 
                   <motion.div
                     key={i}
                     style={{
-                      opacity,
                       y,
+                      zIndex: i + 1,
                     }}
-                    className="absolute inset-0 rounded-3xl overflow-hidden border border-zinc-800"
+                    className="absolute inset-0"
                   >
 
                     <Image
                       src={stock.image}
                       alt={stock.title}
                       fill
-                      className="object-cover"
+                      priority={i === 0}
+                      className="object-cover scale-[1.02]"
                     />
 
                   </motion.div>
 
                 );
+
               })}
 
             </div>

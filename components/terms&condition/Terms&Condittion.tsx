@@ -44,7 +44,7 @@ export default function TermsAndConditions() {
 
               <div>
                 <h3 className="font-helvetica text-xl font-semibold text-white mb-2">
-                  Perpetual License — $249
+                  Perpetual License — $349
                 </h3>
                 <p className="text-zinc-400">
                   Grants lifetime access to all film stock profiles. All future updates, new stocks, 

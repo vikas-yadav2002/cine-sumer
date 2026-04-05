@@ -223,7 +223,7 @@ const videoSlides = [
     title: "FILM DAMAGE",
     description:
       "Create film imperfections in a digital pipeline by layering subtle damage elements—scratches, dust, hair, and chemical stains—over your final graded image.",
-    video: "/LAB/videos/Film Damage -Create film imperfections in a digital pipeline by layering subtle damage elements—scratches, dust, hair, and chemical stains—over your final graded image.png",
+    video: "/LAB/videos/Timeline1.mov",
   },
 ];
 

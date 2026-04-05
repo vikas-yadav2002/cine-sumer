@@ -33,6 +33,11 @@ const faqs = [
     answer:
       'For the perpetual Subscription, you are required to update your DCTL once every year. We send automatic email reminders with update instructions to ensure compatibility and performance.',
   },
+  {
+  question: 'Do I need to pay the full price if I already have a subscription?',
+  answer:
+    'No — if you are already subscribed, you do not need to pay the full price. You only pay the upgrade difference when moving to a higher plan or version.',
+},
 ];
 
 export function FaqAccordion() {
