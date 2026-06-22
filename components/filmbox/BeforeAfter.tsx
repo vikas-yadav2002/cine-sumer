@@ -11,16 +11,26 @@ export function BeforeAfter() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // Define your image pairs from /public/beforeafter/
+  // const slides = [
+  //   { before: '/beforeafter/before1.png', after: '/beforeafter/after1.png' },
+  //   { before: '/beforeafter/before2.png', after: '/beforeafter/after2.png' },
+  //   { before: '/beforeafter/before3.png', after: '/beforeafter/after3.png' },
+  //   { before: '/beforeafter/before4.png', after: '/beforeafter/after4.png' },
+  //   { before: '/beforeafter/before5.png', after: '/beforeafter/after5.png' },
+  //   { before: '/beforeafter/before6.png', after: '/beforeafter/after6.png' },
+  //   { before: '/beforeafter/before7.png', after: '/beforeafter/after7.png' },
+  //   { before: '/beforeafter/before8.png', after: '/beforeafter/after8.png' },
+  // ];
   const slides = [
-    { before: '/beforeafter/before1.png', after: '/beforeafter/after1.png' },
-    { before: '/beforeafter/before2.png', after: '/beforeafter/after2.png' },
-    { before: '/beforeafter/before3.png', after: '/beforeafter/after3.png' },
-    { before: '/beforeafter/before4.png', after: '/beforeafter/after4.png' },
-    { before: '/beforeafter/before5.png', after: '/beforeafter/after5.png' },
-    { before: '/beforeafter/before6.png', after: '/beforeafter/after6.png' },
-    { before: '/beforeafter/before7.png', after: '/beforeafter/after7.png' },
-    { before: '/beforeafter/before8.png', after: '/beforeafter/after8.png' },
-  ];
+  { before: "/beforeafter/before1.webp", after: "/beforeafter/after1.webp" },
+  { before: "/beforeafter/before2.webp", after: "/beforeafter/after2.webp" },
+  { before: "/beforeafter/before3.webp", after: "/beforeafter/after3.webp" },
+  { before: "/beforeafter/before4.webp", after: "/beforeafter/after4.webp" },
+  { before: "/beforeafter/before5.webp", after: "/beforeafter/after5.webp" },
+  { before: "/beforeafter/before6.webp", after: "/beforeafter/after6.webp" },
+  { before: "/beforeafter/before7.webp", after: "/beforeafter/after7.webp" },
+  { before: "/beforeafter/before8.webp", after: "/beforeafter/after8.webp" },
+];
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!isDragging) return;

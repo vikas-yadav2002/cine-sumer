@@ -20,8 +20,8 @@ export function FeatureComparison({
 
   for (let i = 1; i <= totalImages; i += 2) {
     slides.push({
-      before: `/Feature/${folder}/${i}.png`,
-      after: `/Feature/${folder}/${i + 1}.png`,
+      before: `/Feature/${folder}/${i}.webp`,
+      after: `/Feature/${folder}/${i + 1}.webp`,
     });
   }
 

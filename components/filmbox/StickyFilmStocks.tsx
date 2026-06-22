@@ -16,37 +16,37 @@ const stocks: StockItem[] = [
     title: '',
     description:
       'Classic cinema print profile with rich blacks and balanced highlight response.',
-    image: '/hero/1.png',
+    image: '/hero/1.webp',
   },
   {
     title: '',
     description:
       'Modern projection print with tighter contrast and cleaner highlights.',
-    image: '/hero/2.png',
+    image: '/hero/2.webp',
   },
   {
     title: '',
     description:
       'Neutral tonal curve with subtle color compression.',
-    image: '/hero/3.png',
+    image: '/hero/3.webp',
   },
   {
     title: '',
     description:
       'Soft highlight roll-off and smoother shadow transitions.',
-    image: '/hero/4.png',
+    image: '/hero/4.webp',
   },
   {
     title: '',
     description:
       'Soft highlight roll-off and smoother shadow transitions.',
-    image: '/hero/5.png',
+    image: '/hero/5.webp',
   },
   {
     title: '',
     description:
       'Soft highlight roll-off and smoother shadow transitions.',
-    image: '/hero/6.png',
+    image: '/hero/6.webp',
   },
 ];
 

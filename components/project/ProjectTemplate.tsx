@@ -33,7 +33,7 @@ export default function ProjectTemplate({
   // Example placeholder gallery
   const galleryImages = Array.from(
     { length: imageCount },
-    (_, i) => `${imagesPath}/${i + 1}.png`,
+    (_, i) => `${imagesPath}/${i + 1}.webp`,
   );
 
   return (
@@ -233,7 +233,7 @@ function InfiniteCarousel({
 }) {
   const images = Array.from(
     { length: imageCount },
-    (_, i) => `${imagesPath}/${i + 1}.png`,
+    (_, i) => `${imagesPath}/${i + 1}.webp`,
   );
 
   return (

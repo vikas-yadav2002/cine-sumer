@@ -10,15 +10,15 @@ import { Navbar } from "@/components/site/Navbar";
 /* ----------------------------- */
 
 const images = [
-  "/sumerfadelite/1.jpg",
-  "/sumerfadelite/2.jpg",
-  "/sumerfadelite/3.jpg",
-  "/sumerfadelite/4.jpg",
-  "/sumerfadelite/5.jpg",
-  "/sumerfadelite/6.jpg",
-  "/sumerfadelite/7.jpg",
-  "/sumerfadelite/8.jpg",
-  "/sumerfadelite/9.jpg",
+  "/sumerfadelite/1.webp",
+  "/sumerfadelite/2.webp",
+  "/sumerfadelite/3.webp",
+  "/sumerfadelite/4.webp",
+  "/sumerfadelite/5.webp",
+  "/sumerfadelite/6.webp",
+  "/sumerfadelite/7.webp",
+  "/sumerfadelite/8.webp",
+  "/sumerfadelite/9.webp",
 ];
 
 export default function SumerFadeLitePage() {
